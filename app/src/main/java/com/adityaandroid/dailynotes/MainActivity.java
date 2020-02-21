@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -15,11 +14,9 @@ import androidx.lifecycle.ViewModelStoreOwner;
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
 import com.adityaandroid.dailynotes.Ui.NotesAdapter;
 import com.adityaandroid.dailynotes.database.NotesEntity;
 import com.adityaandroid.dailynotes.viewmodel.MainViewModel;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -59,8 +56,6 @@ public class MainActivity extends AppCompatActivity implements ViewModelStoreOwn
         }
         mViewModel = new ViewModelProvider(this , viewmodelFactory).get(MainViewModel.class);
 
-
-
         final Observer<List<NotesEntity>> notesObserver =
 
                 new Observer<List<NotesEntity>>(){
@@ -92,8 +87,6 @@ public class MainActivity extends AppCompatActivity implements ViewModelStoreOwn
         return viewModelStore;
     }
 
-
-
     private void initRecyclerView() {
         mRecyclerView.setHasFixedSize(true);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
@@ -104,7 +97,6 @@ public class MainActivity extends AppCompatActivity implements ViewModelStoreOwn
         mRecyclerView.addItemDecoration(itemDecoration);
 
     }
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
